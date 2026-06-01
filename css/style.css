@@ -602,6 +602,22 @@ p  { max-width: 65ch; }
   border-radius: var(--radius);
 }
 
+.maps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.maps-wrapper iframe {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+.maps-open-btn {
+  align-self: flex-start;
+}
+
 /* ===================================================
    12. FOOTER
    =================================================== */

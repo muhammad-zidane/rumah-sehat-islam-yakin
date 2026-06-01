@@ -588,20 +588,21 @@
 
       <!-- Kolom kanan: maps -->
       <div class="kontak__maps" data-aos="fade-left">
-        <!--
-          PLACEHOLDER: ganti div.maps-placeholder di bawah dengan tag <iframe> resmi dari
-          Google Business klien. Contoh:
-          <iframe src="..." width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        -->
-        <div class="maps-placeholder" role="region" aria-label="Peta lokasi klinik — placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <p><strong>Google Maps</strong></p>
-          <p>Jl. Imam Bonjol No.139<br>Payakumbuh, Sumatera Barat</p>
-          <p class="maps-note">[Link embed resmi dari Google Business akan dipasang di sini oleh klien]</p>
-          <a href="https://maps.google.com/?q=Jl.+Imam+Bonjol+No.139+Payakumbuh+Sumatera+Barat"
-             class="btn btn-primary"
+        <div class="maps-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=Jl.+Imam+Bonjol+No.+139,+Padangdata+Tanahmati,+Payakumbuh+Barat,+Kota+Payakumbuh,+Sumatera+Barat&output=embed"
+            width="100%"
+            height="380"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Rumah Sehat Islam Yakin, Jl. Imam Bonjol No.139, Payakumbuh">
+          </iframe>
+          <a href="https://maps.google.com/?q=Rumah+Sehat+Islam+Yakin,+Jl.+Imam+Bonjol+No.+139,+Payakumbuh+Barat,+Sumatera+Barat"
+             class="btn btn-primary maps-open-btn"
              target="_blank"
              rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
             Buka di Google Maps
           </a>
         </div>
