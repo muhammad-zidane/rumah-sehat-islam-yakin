@@ -443,21 +443,109 @@ p  { max-width: 65ch; }
 .terapis-card__info h3   { font-size: 1rem; margin-bottom: 2px; }
 .terapis-card__role      { font-size: 0.78rem; font-weight: 600; color: var(--c-primary); margin-bottom: var(--space-2); max-width: none; }
 .terapis-card__info > p  { font-size: 0.83rem; color: var(--c-muted); max-width: none; }
-.terapis-card__sertifikat {
-  margin-top: var(--space-2);
-  height: 44px;
-  border-radius: var(--radius-sm);
-  background: var(--c-primary-soft);
+
+/* ===================================================
+   10. SERTIFIKASI
+   =================================================== */
+.sertifikat-section {
+  grid-column: 1 / -1;
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1.5px solid var(--c-border);
+}
+
+.sertifikat-section__title {
+  font-size: 1.1rem;
+  color: var(--c-primary);
+  margin-bottom: var(--space-5);
+  text-align: center;
+}
+
+.sertifikat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sertifikat-group__nama {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.sertifikat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.sertifikat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-decoration: none;
+}
+
+.sertifikat-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--c-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.sertifikat-card:hover img {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+  border-color: var(--c-primary);
+}
+
+.sertifikat-card__zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--c-muted);
-  font-size: 0.6rem;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.sertifikat-card:hover .sertifikat-card__zoom { opacity: 1; }
+
+.sertifikat-card p {
+  font-size: 0.82rem;
   font-weight: 600;
+  color: var(--c-text);
+  text-align: center;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .sertifikat-grid { flex-direction: row; gap: var(--space-6); }
+  .sertifikat-group { flex: 1; }
 }
 
 /* ===================================================
-   10. TESTIMONI
+   11. TESTIMONI
    =================================================== */
 .testimoni__disclaimer {
   display: inline-block;
